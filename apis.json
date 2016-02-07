@@ -10,7 +10,7 @@
   "modified": "2014-07-09",
   "url": "https://kin-lane.github.io/content/contents.json",
   "SpecificationVersion": "0.14",
-  "contents": [
+  "apis": [
     {
       "name": "Content",
       "description": "The system I use to manage all the content that I track on as part of the API Evangelist network.",
