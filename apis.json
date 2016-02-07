@@ -1,6 +1,6 @@
 {
   "name": "Kin Lane - Content",
-  "description": "This is my API for managing Content. It is a content resource, with supporting docker container for the content.",
+  "description": "This is my API for managing that I use across my network, providing me with a set of resources to automate content and media management.",
   "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-content.png",
   "tags": [
     "application programming interface",
@@ -8,7 +8,7 @@
   ],
   "created": "2014-04-07",
   "modified": "2014-07-09",
-  "url": "https://kin-lane.github.io/content/contents.json",
+  "url": "https://kin-lane.github.io/content/apis.json",
   "SpecificationVersion": "0.14",
   "apis": [
     {
@@ -41,128 +41,128 @@
       ],
       "contact": [
         {
-          "FN": "Content Evangliest",
-          "email": "info@contentevangelist.com",
-          "X-twitter": "contentevangelist"
+          "FN": "API Evangelist",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
         }
       ]
     }
   ],
   "include": [
     {
-      "name": "Content Content (Inception)",
-      "url": "https://kin-lane.github.io/content/contents.json"
+      "name": "API API (Inception)",
+      "url": "https://kin-lane.github.io/content/APIs.json"
     },
     {
-      "name": "Audio Content",
-      "url": "https://kin-lane.github.io/audio/contents.json"
+      "name": "Audio API",
+      "url": "https://kin-lane.github.io/audio/APIs.json"
     },
     {
-      "name": "Blog Content",
-      "url": "https://kin-lane.github.io/blog/contents.json"
+      "name": "Blog API",
+      "url": "https://kin-lane.github.io/blog/APIs.json"
     },
     {
-      "name": "Building Block Content",
-      "url": "https://kin-lane.github.io/buildingblock/contents.json"
+      "name": "Building Block API",
+      "url": "https://kin-lane.github.io/buildingblock/APIs.json"
     },
     {
-      "name": "Certification Content",
-      "url": "https://kin-lane.github.io/certification/contents.json"
+      "name": "Certification API",
+      "url": "https://kin-lane.github.io/certification/APIs.json"
     },
     {
-      "name": "Curated Content",
-      "url": "https://kin-lane.github.io/curated/contents.json"
+      "name": "Curated API",
+      "url": "https://kin-lane.github.io/curated/APIs.json"
     },
     {
-      "name": "Glossary Content",
-      "url": "https://kin-lane.github.io/glossary/contents.json"
+      "name": "Glossary API",
+      "url": "https://kin-lane.github.io/glossary/APIs.json"
     },
     {
-      "name": "Image Content",
-      "url": "https://kin-lane.github.io/image/contents.json"
+      "name": "Image API",
+      "url": "https://kin-lane.github.io/image/APIs.json"
     },
     {
-      "name": "Job Content",
-      "url": "https://kin-lane.github.io/job/contents.json"
+      "name": "Job API",
+      "url": "https://kin-lane.github.io/job/APIs.json"
     },
     {
-      "name": "Keyword Content",
-      "url": "https://kin-lane.github.io/keyword/contents.json"
+      "name": "Keyword API",
+      "url": "https://kin-lane.github.io/keyword/APIs.json"
     },
     {
-      "name": "Link Content",
-      "url": "https://kin-lane.github.io/link/contents.json"
+      "name": "Link API",
+      "url": "https://kin-lane.github.io/link/APIs.json"
     },
     {
-      "name": "Linkrot Content",
-      "url": "https://kin-lane.github.io/linkrot/contents.json"
+      "name": "Linkrot API",
+      "url": "https://kin-lane.github.io/linkrot/APIs.json"
     },
     {
-      "name": "News Content",
-      "url": "https://kin-lane.github.io/news/contents.json"
+      "name": "News API",
+      "url": "https://kin-lane.github.io/news/APIs.json"
     },
     {
-      "name": "Note Content",
-      "url": "https://kin-lane.github.io/note/contents.json"
+      "name": "Note API",
+      "url": "https://kin-lane.github.io/note/APIs.json"
     },
     {
-      "name": "Organization Content",
-      "url": "https://kin-lane.github.io/organization/contents.json"
+      "name": "Organization API",
+      "url": "https://kin-lane.github.io/organization/APIs.json"
     },
     {
-      "name": "Page Content",
-      "url": "https://kin-lane.github.io/page/contents.json"
+      "name": "Page API",
+      "url": "https://kin-lane.github.io/page/APIs.json"
     },
     {
-      "name": "Paper Content",
-      "url": "https://kin-lane.github.io/paper/contents.json"
+      "name": "Paper API",
+      "url": "https://kin-lane.github.io/paper/APIs.json"
     },
     {
-      "name": "Patent Content",
-      "url": "https://kin-lane.github.io/patent/contents.json"
+      "name": "Patent API",
+      "url": "https://kin-lane.github.io/patent/APIs.json"
     },
     {
-      "name": "People Content",
-      "url": "https://kin-lane.github.io/people/contents.json"
+      "name": "People API",
+      "url": "https://kin-lane.github.io/people/APIs.json"
     },
     {
-      "name": "Project Content",
-      "url": "https://kin-lane.github.io/project/contents.json"
+      "name": "Project API",
+      "url": "https://kin-lane.github.io/project/APIs.json"
     },
     {
-      "name": "Question Content",
-      "url": "https://kin-lane.github.io/question/contents.json"
+      "name": "Question API",
+      "url": "https://kin-lane.github.io/question/APIs.json"
     },
     {
-      "name": "Slide Content",
-      "url": "https://kin-lane.github.io/slide/contents.json"
+      "name": "Slide API",
+      "url": "https://kin-lane.github.io/slide/APIs.json"
     },
     {
-      "name": "Tag Content",
-      "url": "https://kin-lane.github.io/tag/contents.json"
+      "name": "Tag API",
+      "url": "https://kin-lane.github.io/tag/APIs.json"
     },
     {
-      "name": "Task Content",
-      "url": "https://kin-lane.github.io/task/contents.json"
+      "name": "Task API",
+      "url": "https://kin-lane.github.io/task/APIs.json"
     },
     {
-      "name": "Tip Content",
-      "url": "https://kin-lane.github.io/tip/contents.json"
+      "name": "Tip API",
+      "url": "https://kin-lane.github.io/tip/APIs.json"
     },
     {
-      "name": "Tool Content",
-      "url": "https://kin-lane.github.io/tool/contents.json"
+      "name": "Tool API",
+      "url": "https://kin-lane.github.io/tool/APIs.json"
     },
     {
-      "name": "Video Content",
-      "url": "https://kin-lane.github.io/video/contents.json"
+      "name": "Video API",
+      "url": "https://kin-lane.github.io/video/APIs.json"
     }
   ],
   "maintainers": [
     {
-      "FN": "Content Evangliest",
-      "X-twitter": "contentevangelist",
-      "email": "info@contentevangelist.com"
+      "FN": "API Evangelist",
+      "X-twitter": "apievangelist",
+      "email": "info@evangelist.com"
     }
   ]
 }
