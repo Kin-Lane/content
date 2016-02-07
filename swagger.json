@@ -1,61 +1,61 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "API",
-    "description": "This is my API for tracking on APIs across the API space. I try to track on all details about the APIs I'm monitoring including their profile, Twitter, Github, blogs, etc.",
+    "title": "Content",
+    "description": "This is my Content for tracking on Content across the Content space. I try to track on all details about the Content I'm monitoring including their profile, Twitter, Github, blogs, etc.",
     "termsOfService": "http://kinlane.com/terms-of-service.html",
     "version": "v1"
   },
-  "host": "api.api.kinlane.com",
+  "host": "content.content.kinlane.com",
   "basePath": "/",
   "schemes": [
     "http"
   ],
   "produces": [
-    "apilication/json"
+    "application/json"
   ],
   "paths": {
-    "/api/": {
+    "/content/": {
       "get": {
-        "summary": "retrieves all apis",
-        "description": "retrieves all apis",
-        "operationId": "getAPIs",
+        "summary": "retrieves all content",
+        "description": "retrieves all content",
+        "operationId": "getContent",
         "parameters": [
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "query",
             "in": "query",
-            "description": "a text query to search across APIs",
+            "description": "a text query to search across Content",
             "required": false,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Response",
+            "description": "Content Response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/api"
+                "$ref": "#/definitions/content"
               }
             }
           }
         },
         "tags": [
-          "API"
+          "Content"
         ],
         "security": [
           {
@@ -67,66 +67,66 @@
         ]
       },
       "post": {
-        "summary": "add api",
-        "description": "add api",
-        "operationId": "addAPI",
+        "summary": "add content",
+        "description": "add content",
+        "operationId": "addContent",
         "parameters": [
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "name",
             "in": "query",
-            "description": "name of the API",
+            "description": "name of the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "about",
             "in": "query",
-            "description": "details about the API",
+            "description": "details about the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "rank",
             "in": "query",
-            "description": "ranking of API",
+            "description": "ranking of Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "organization_id",
             "in": "query",
-            "description": "organization ID for the API",
+            "description": "organization ID for the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "api response",
+            "description": "content response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/api"
+                "$ref": "#/definitions/content"
               }
             }
           }
         },
         "tags": [
-          "API"
+          "Content"
         ],
         "security": [
           {
@@ -138,16 +138,16 @@
         ]
       }
     },
-    "/api/{api_id}/": {
+    "/content/{content_id}/": {
       "get": {
-        "summary": "retrieve an API",
-        "description": "retrieve an API",
-        "operationId": "getAPI",
+        "summary": "retrieve an Content",
+        "description": "retrieve an Content",
+        "operationId": "getContent",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -155,31 +155,31 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "api response",
+            "description": "content response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/api"
+                "$ref": "#/definitions/content"
               }
             }
           }
         },
         "tags": [
-          "API"
+          "Content"
         ],
         "security": [
           {
@@ -191,14 +191,14 @@
         ]
       },
       "put": {
-        "summary": "update an API",
-        "description": "update an API",
-        "operationId": "updateAPI",
+        "summary": "update an Content",
+        "description": "update an Content",
+        "operationId": "updateContent",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -206,59 +206,59 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "name",
             "in": "query",
-            "description": "name of the API",
+            "description": "name of the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "about",
             "in": "query",
-            "description": "details about the API",
+            "description": "details about the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "rank",
             "in": "query",
-            "description": "ranking of API",
+            "description": "ranking of Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "organization_id",
             "in": "query",
-            "description": "organization ID for the API",
+            "description": "organization ID for the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API response",
+            "description": "Content response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/api"
+                "$ref": "#/definitions/content"
               }
             }
           }
         },
         "tags": [
-          "API"
+          "Content"
         ],
         "security": [
           {
@@ -270,14 +270,14 @@
         ]
       },
       "delete": {
-        "summary": "delete an API",
-        "description": "delete an API",
-        "operationId": "deleteAPI",
+        "summary": "delete an Content",
+        "description": "delete an Content",
+        "operationId": "deleteContent",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -285,31 +285,31 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "api response",
+            "description": "content response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/api"
+                "$ref": "#/definitions/content"
               }
             }
           }
         },
         "tags": [
-          "API"
+          "Content"
         ],
         "security": [
           {
@@ -321,16 +321,16 @@
         ]
       }
     },
-    "/api/{api_id}/tags/": {
+    "/content/{content_id}/tags/": {
       "get": {
-        "summary": "retrieve API tags",
-        "description": "retrieve API tags",
-        "operationId": "getAPITags",
+        "summary": "retrieve Content tags",
+        "description": "retrieve Content tags",
+        "operationId": "getContentTags",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for API",
+            "description": "id for Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -338,21 +338,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Tags Response",
+            "description": "Content Tags Response",
             "schema": {
               "type": "array",
               "items": {
@@ -374,14 +374,14 @@
         ]
       },
       "post": {
-        "summary": "add tag to API",
-        "description": "add tag to API",
-        "operationId": "addAPITag",
+        "summary": "add tag to Content",
+        "description": "add tag to Content",
+        "operationId": "addContentTag",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -389,14 +389,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -410,7 +410,7 @@
         ],
         "responses": {
           "200": {
-            "description": "api response",
+            "description": "content response",
             "schema": {
               "type": "array",
               "items": {
@@ -432,16 +432,16 @@
         ]
       }
     },
-    "/api/{api_id}/tags/{tag}": {
+    "/content/{content_id}/tags/{tag}": {
       "delete": {
-        "summary": "delete an API tag",
-        "description": "delete an API tag",
-        "operationId": "deleteAPITag",
+        "summary": "delete an Content tag",
+        "description": "delete an Content tag",
+        "operationId": "deleteContentTag",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -449,28 +449,28 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "tag",
             "in": "path",
-            "description": "tag to remove from API",
+            "description": "tag to remove from Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Tag Response",
+            "description": "Content Tag Response",
             "schema": {
               "type": "array",
               "items": {
@@ -492,16 +492,16 @@
         ]
       }
     },
-    "/api/{api_id}/notes/": {
+    "/content/{content_id}/notes/": {
       "get": {
-        "summary": "retrieve an APIs notes",
-        "description": "retrieve an APIs notes",
-        "operationId": "getAPINotes",
+        "summary": "retrieve an Content notes",
+        "description": "retrieve an Content notes",
+        "operationId": "getContentNotes",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -509,21 +509,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Notes Response",
+            "description": "Content Notes Response",
             "schema": {
               "type": "array",
               "items": {
@@ -545,14 +545,14 @@
         ]
       },
       "post": {
-        "summary": "add an API note",
-        "description": "add an API note",
-        "operationId": "addAPINote",
+        "summary": "add an Content note",
+        "description": "add an Content note",
+        "operationId": "addContentNote",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -560,14 +560,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -588,7 +588,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Note Response",
+            "description": "Content Note Response",
             "schema": {
               "type": "array",
               "items": {
@@ -610,16 +610,16 @@
         ]
       }
     },
-    "/api/{api_id}/notes/{note_id}/": {
+    "/content/{content_id}/notes/{note_id}/": {
       "delete": {
-        "summary": "delete an API note",
-        "description": "delete an API note",
-        "operationId": "deleteAPINote",
+        "summary": "delete an Content note",
+        "description": "delete an Content note",
+        "operationId": "deleteContentNote",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -627,14 +627,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -648,7 +648,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Note Response",
+            "description": "Content Note Response",
             "schema": {
               "type": "array",
               "items": {
@@ -670,16 +670,16 @@
         ]
       }
     },
-    "/api/{api_id}/urls/": {
+    "/content/{content_id}/urls/": {
       "get": {
-        "summary": "retrieve an APIs URLs",
-        "description": "retrieve an APIs URLs",
-        "operationId": "getAPIURLs",
+        "summary": "retrieve an Content URLs",
+        "description": "retrieve an Content URLs",
+        "operationId": "getContentURLs",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -687,21 +687,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API URL Response",
+            "description": "Content URL Response",
             "schema": {
               "type": "array",
               "items": {
@@ -723,14 +723,14 @@
         ]
       },
       "post": {
-        "summary": "add an API URL",
-        "description": "add an API URL",
-        "operationId": "addAPIURL",
+        "summary": "add an Content URL",
+        "description": "add an Content URL",
+        "operationId": "addContentURL",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -738,14 +738,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -773,7 +773,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API URL Response",
+            "description": "Content URL Response",
             "schema": {
               "type": "array",
               "items": {
@@ -795,16 +795,16 @@
         ]
       }
     },
-    "/api/{api_id}/urls/{url_id}/": {
+    "/content/{content_id}/urls/{url_id}/": {
       "delete": {
-        "summary": "delete an API URL",
-        "description": "delete an API URL",
-        "operationId": "deleteAPIURL",
+        "summary": "delete an Content URL",
+        "description": "delete an Content URL",
+        "operationId": "deleteContentURL",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -812,14 +812,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -833,7 +833,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API URL Response",
+            "description": "Content URL Response",
             "schema": {
               "type": "array",
               "items": {
@@ -855,16 +855,16 @@
         ]
       }
     },
-    "/api/{api_id}/images/": {
+    "/content/{content_id}/images/": {
       "get": {
-        "summary": "retrieve an APIs images",
-        "description": "retrieve an APIs images",
-        "operationId": "getAPIImages",
+        "summary": "retrieve an Content images",
+        "description": "retrieve an Content images",
+        "operationId": "getContentImages",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -872,21 +872,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Image Response",
+            "description": "Content Image Response",
             "schema": {
               "type": "array",
               "items": {
@@ -908,14 +908,14 @@
         ]
       },
       "post": {
-        "summary": "add an API image",
-        "description": "add an API image",
-        "operationId": "addAPIImage",
+        "summary": "add an Content image",
+        "description": "add an Content image",
+        "operationId": "addContentImage",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -923,14 +923,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -958,7 +958,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Image Response",
+            "description": "Content Image Response",
             "schema": {
               "type": "array",
               "items": {
@@ -980,16 +980,16 @@
         ]
       }
     },
-    "/api/{api_id}/images/{image_id}": {
+    "/content/{content_id}/images/{image_id}": {
       "delete": {
-        "summary": "delete an API image",
-        "description": "delete an API image",
-        "operationId": "deleteAPIImage",
+        "summary": "delete an Content image",
+        "description": "delete an Content image",
+        "operationId": "deleteContentImage",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -997,14 +997,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1018,7 +1018,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Image Response",
+            "description": "Content Image Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1040,16 +1040,16 @@
         ]
       }
     },
-    "/api/{api_id}/screenshots/": {
+    "/content/{content_id}/screenshots/": {
       "get": {
-        "summary": "retrieve API screenshots",
-        "description": "retrieve API screenshots",
-        "operationId": "getAPIScreenshots",
+        "summary": "retrieve Content screenshots",
+        "description": "retrieve Content screenshots",
+        "operationId": "getContentScreenshots",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1057,21 +1057,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Screenshot Response",
+            "description": "Content Screenshot Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1093,14 +1093,14 @@
         ]
       },
       "post": {
-        "summary": "add an API screenshot",
-        "description": "add an API screenshot",
-        "operationId": "addAPIScreenshot",
+        "summary": "add an Content screenshot",
+        "description": "add an Content screenshot",
+        "operationId": "addContentScreenshot",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1108,14 +1108,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1143,7 +1143,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Screenshot Response",
+            "description": "Content Screenshot Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1165,16 +1165,16 @@
         ]
       }
     },
-    "/api/{api_id}/screenshots/{screenshot_id}": {
+    "/content/{content_id}/screenshots/{screenshot_id}": {
       "delete": {
-        "summary": "delete an API screenshot",
-        "description": "delete an API screenshot",
-        "operationId": "deleteAPIScreenshot",
+        "summary": "delete an Content screenshot",
+        "description": "delete an Content screenshot",
+        "operationId": "deleteContentScreenshot",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1182,14 +1182,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1203,7 +1203,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Screenshot Response",
+            "description": "Content Screenshot Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1225,16 +1225,16 @@
         ]
       }
     },
-    "/api/{api_id}/buildingblocks/": {
+    "/content/{content_id}/buildingblocks/": {
       "get": {
-        "summary": "retrieve an APIs building blocks",
-        "description": "retrieve an APIs building blocks",
-        "operationId": "getAPIBuildingBlocks",
+        "summary": "retrieve an Content building blocks",
+        "description": "retrieve an Content building blocks",
+        "operationId": "getContentBuildingBlocks",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1242,21 +1242,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Building Block Response",
+            "description": "Content Building Block Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1278,14 +1278,14 @@
         ]
       },
       "post": {
-        "summary": "add an API building block",
-        "description": "add an API building block",
-        "operationId": "addAPIBuildingBlock",
+        "summary": "add an Content building block",
+        "description": "add an Content building block",
+        "operationId": "addContentBuildingBlock",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1293,14 +1293,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1335,7 +1335,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Building Block Response",
+            "description": "Content Building Block Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1357,16 +1357,16 @@
         ]
       }
     },
-    "/api/{api_id}/buildingblocks/{buildingblock_id}": {
+    "/content/{content_id}/buildingblocks/{buildingblock_id}": {
       "delete": {
-        "summary": "delete an API building block",
-        "description": "delete an API building block",
-        "operationId": "deleteAPIBuildingBlocks",
+        "summary": "delete an Content building block",
+        "description": "delete an Content building block",
+        "operationId": "deleteContentBuildingBlocks",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1374,14 +1374,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1395,7 +1395,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Building Block Response",
+            "description": "Content Building Block Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1417,16 +1417,16 @@
         ]
       }
     },
-    "/api/{api_id}/logs/": {
+    "/content/{content_id}/logs/": {
       "get": {
-        "summary": "retrieve an APIs logs",
-        "description": "retrieve an APIs logs",
-        "operationId": "getAPILogs",
+        "summary": "retrieve an Content logs",
+        "description": "retrieve an Content logs",
+        "operationId": "getContentLogs",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the API",
+            "description": "id for the Content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1434,21 +1434,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Log response",
+            "description": "Content Log response",
             "schema": {
               "type": "array",
               "items": {
@@ -1470,14 +1470,14 @@
         ]
       },
       "post": {
-        "summary": "add an API log",
-        "description": "add an API log",
-        "operationId": "addAPILog",
+        "summary": "add an Content log",
+        "description": "add an Content log",
+        "operationId": "addContentLog",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1485,14 +1485,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1520,7 +1520,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Log response",
+            "description": "Content Log response",
             "schema": {
               "type": "array",
               "items": {
@@ -1542,16 +1542,16 @@
         ]
       }
     },
-    "/api/{api_id}/logs/{log_id}/": {
+    "/content/{content_id}/logs/{log_id}/": {
       "delete": {
-        "summary": "delete an API log",
-        "description": "delete an API log",
-        "operationId": "deleteAPILog",
+        "summary": "delete an Content log",
+        "description": "delete an Content log",
+        "operationId": "deleteContentLog",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1559,14 +1559,14 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1580,7 +1580,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Log response",
+            "description": "Content Log response",
             "schema": {
               "type": "array",
               "items": {
@@ -1602,16 +1602,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/export/swagger/1.2/": {
+    "/content/{content_id}/definitions/export/swagger/1.2/": {
       "get": {
         "summary": "export a Swagger 1.2 definition",
         "description": "export a Swagger 1.2 definition",
         "operationId": "exportSwagger12Definition",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1619,21 +1619,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Definition Response",
+            "description": "Content Definition Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1655,16 +1655,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/import/swagger/1.2/": {
+    "/content/{content_id}/definitions/import/swagger/1.2/": {
       "post": {
         "summary": "imports a Swagger 1.2 definition",
         "description": "imports a Swagger 1.2 definition",
         "operationId": "importSwagger12Definition",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1672,14 +1672,14 @@
           {
             "name": "appid",
             "in": "formData",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "formData",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1693,7 +1693,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Definition Response",
+            "description": "Content Definition Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1715,16 +1715,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/export/swagger/2.0/": {
+    "/content/{content_id}/definitions/export/swagger/2.0/": {
       "get": {
         "summary": "exports a Swagger 2.0 definition",
         "description": "exports a Swagger 2.0 definition",
         "operationId": "exportSwagger20Definition",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1732,21 +1732,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Definition Response",
+            "description": "Content Definition Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1768,16 +1768,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/import/swagger/2.0/": {
+    "/content/{content_id}/definitions/import/swagger/2.0/": {
       "post": {
         "summary": "import a Swagger 2.0 definition",
         "description": "import a Swagger 2.0 definition",
         "operationId": "importSwagger20Definition",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1785,14 +1785,14 @@
           {
             "name": "appid",
             "in": "formData",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "formData",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
@@ -1806,7 +1806,7 @@
         ],
         "responses": {
           "200": {
-            "description": "API Definition Response",
+            "description": "Content Definition Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1828,16 +1828,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/export/apisjson/.14/": {
+    "/content/{content_id}/definitions/export/contentjson/.14/": {
       "get": {
-        "summary": "export an apis.json definition",
-        "description": "export an apis.json definition",
-        "operationId": "exportAPIsJSON",
+        "summary": "export an content.json definition",
+        "description": "export an content.json definition",
+        "operationId": "exportContentJSON",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1845,21 +1845,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Definition Response",
+            "description": "Content Definition Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1881,16 +1881,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/export/apisjson/.14/master/": {
+    "/content/{content_id}/definitions/export/contentjson/.14/master/": {
       "get": {
-        "summary": "export an apis.json master definition",
-        "description": "export an apis.json master definition",
-        "operationId": "exportAPIsJSONMaster",
+        "summary": "export an content.json master definition",
+        "description": "export an content.json master definition",
+        "operationId": "exportContentJSONMaster",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1898,21 +1898,21 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API Definition Response",
+            "description": "Content Definition Response",
             "schema": {
               "type": "array",
               "items": {
@@ -1934,16 +1934,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/code/php/generate/path/parameters/": {
+    "/content/{content_id}/definitions/code/php/generate/path/parameters/": {
       "get": {
         "summary": "generate php array parameters",
         "description": "generate php array parameters",
         "operationId": "generatePHPArrayParameters",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -1951,35 +1951,35 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "filterpath",
             "in": "query",
-            "description": "the api path to filter by",
+            "description": "the content path to filter by",
             "required": false,
             "type": "string"
           },
           {
             "name": "filterverb",
             "in": "query",
-            "description": "the api verb to filter by",
+            "description": "the content verb to filter by",
             "required": false,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API PHP Generate Snippet Response",
+            "description": "Content PHP Generate Snippet Response",
             "schema": {
               "type": "array",
               "items": {
@@ -2001,16 +2001,16 @@
         ]
       }
     },
-    "/api/{api_id}/definitions/code/php/generate/definition/parameters/": {
+    "/content/{content_id}/definitions/code/php/generate/definition/parameters/": {
       "get": {
         "summary": "generate php array parameters",
         "description": "generate php array parameters",
         "operationId": "generatePHPArrayParameters",
         "parameters": [
           {
-            "name": "api_id",
+            "name": "content_id",
             "in": "path",
-            "description": "id for the api",
+            "description": "id for the content",
             "required": true,
             "type": "string",
             "format": "id"
@@ -2018,28 +2018,28 @@
           {
             "name": "appid",
             "in": "query",
-            "description": "your appid for accessing the API",
+            "description": "your appid for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
             "in": "query",
-            "description": "your appkey for accessing the API",
+            "description": "your appkey for accessing the Content",
             "required": true,
             "type": "string"
           },
           {
             "name": "filterobject",
             "in": "query",
-            "description": "the api definition object to filter by",
+            "description": "the content definition object to filter by",
             "required": false,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "API PHP Generate Snippet Response",
+            "description": "Content PHP Generate Snippet Response",
             "schema": {
               "type": "array",
               "items": {
@@ -2048,7 +2048,7 @@
             }
           },
           "400": {
-            "description": "API PHP Generate Snippet Response"
+            "description": "Content PHP Generate Snippet Response"
           }
         },
         "tags": [
@@ -2067,78 +2067,78 @@
   },
   "securityDefinitions": {
     "appid": {
-      "type": "apiKey",
+      "type": "contentKey",
       "name": "appid",
       "in": "query"
     },
     "appkey": {
-      "type": "apiKey",
+      "type": "contentKey",
       "name": "appkey",
       "in": "query"
     }
   },
   "definitions": {
-    "api": {
+    "content": {
       "properties": {
-        "api_id": {
-          "description": "id for the api",
+        "content_id": {
+          "description": "id for the content",
           "type": "string",
           "format": "label"
         },
         "title": {
-          "description": "title of the api",
+          "description": "title of the content",
           "type": "string"
         },
         "link": {
-          "description": "url for the api",
+          "description": "url for the content",
           "type": "string"
         },
         "item_date": {
-          "description": "date applied to the api",
+          "description": "date applied to the content",
           "type": "string"
         },
         "details": {
-          "description": "raw details for the api",
+          "description": "raw details for the content",
           "type": "string",
           "format": "id"
         },
         "status": {
-          "description": "status of the api",
+          "description": "status of the content",
           "type": "string",
           "format": "id"
         },
         "public_comment": {
-          "description": "any public comment for the api",
+          "description": "any public comment for the content",
           "type": "string",
           "format": "id"
         },
         "original_date": {
-          "description": "orignal date for the api",
+          "description": "orignal date for the content",
           "type": "string",
           "format": "datetime"
         },
         "author": {
-          "description": "author for the api",
+          "description": "author for the content",
           "type": "string",
           "format": "id"
         },
         "processed": {
-          "description": "has the api been processed",
+          "description": "has the content been processed",
           "type": "string",
           "format": "id"
         },
         "domain": {
-          "description": "root domain for the api",
+          "description": "root domain for the content",
           "type": "string",
           "format": "id"
         },
         "screenshot_url": {
-          "description": "screenshot url for the api",
+          "description": "screenshot url for the content",
           "type": "string",
           "format": "id"
         },
         "resolved_url": {
-          "description": "resolved url for the api",
+          "description": "resolved url for the content",
           "type": "string",
           "format": "id"
         },
@@ -2165,8 +2165,8 @@
           "description": "text tag",
           "type": "string"
         },
-        "api_count": {
-          "description": "number of items api with tag",
+        "content_count": {
+          "description": "number of items content with tag",
           "type": "integer"
         }
       }
@@ -2174,7 +2174,7 @@
     "note": {
       "properties": {
         "note_id": {
-          "description": "id for the api",
+          "description": "id for the content",
           "type": "string",
           "format": "id"
         },
@@ -2199,7 +2199,7 @@
     "url": {
       "properties": {
         "note_id": {
-          "description": "id for the API",
+          "description": "id for the Content",
           "type": "string",
           "format": "id"
         },
@@ -2219,8 +2219,8 @@
     },
     "image": {
       "properties": {
-        "api_id": {
-          "description": "id for the API",
+        "content_id": {
+          "description": "id for the Content",
           "type": "string",
           "format": "id"
         },
@@ -2245,8 +2245,8 @@
     },
     "screenshot": {
       "properties": {
-        "api_id": {
-          "description": "id for the API",
+        "content_id": {
+          "description": "id for the Content",
           "type": "string",
           "format": "id"
         },
@@ -2271,8 +2271,8 @@
     },
     "buildingblock": {
       "properties": {
-        "api_id": {
-          "description": "id for the API",
+        "content_id": {
+          "description": "id for the Content",
           "type": "string",
           "format": "id"
         },
@@ -2299,8 +2299,8 @@
     },
     "log": {
       "properties": {
-        "api_id": {
-          "description": "id for the API",
+        "content_id": {
+          "description": "id for the Content",
           "type": "string",
           "format": "id"
         },
