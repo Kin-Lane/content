@@ -25,18 +25,6 @@
         {
           "type": "swagger",
           "url": "https://kin-lane.github.io/content/swagger.json"
-        },
-        {
-          "type": "x-postman",
-          "url": "https://kin-lane.github.io/content/postman.json"
-        },
-        {
-          "type": "x-contentmatic-sdks",
-          "url": "https://kin-lane.github.io/content/code/"
-        },
-        {
-          "type": "x-content-science",
-          "url": "https://kin-lane.github.io/content/status/"
         }
       ],
       "contact": [
